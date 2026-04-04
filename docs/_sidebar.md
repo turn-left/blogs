@@ -1,6 +1,12 @@
 - [首页](README.md)
-- **后端开发**
-  - [Java 基础](backend/java.md)
-  - [Python 笔记](backend/python.md)
-- **前端技术**
-  - [Vue 实战](frontend/vue.md)
+- **AI技术**
+  - [AI 笔记](ai/ai.md)
+- **德语学习**
+  - [德语笔记](german/german.md)
+- **英语学习**
+  - [英语笔记](english/english.md)
+- **云原生**
+  - [Kubernetes](cloudnative/k8s.md)
+  - [Docker](cloudnative/docker.md)
+- **架构设计**
+  - [系统设计](architecture/system-design.md)
