@@ -22,6 +22,12 @@
       href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"
     />
 
+    <!-- TOC 右侧目录插件样式 -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.css"
+    />
+
     <!-- 自定义样式 -->
     <style>
       :root {
@@ -49,7 +55,7 @@
         border-radius: 8px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         margin: 20px auto;
-        max-width: 900px;
+        max-width: 1000px;
       }
 
       /* 导航栏样式 */
@@ -366,6 +372,67 @@
       .toc a:hover {
         color: var(--primary);
       }
+
+      /* TOC 右侧浮动目录 */
+      .toc-wrapper {
+        position: fixed;
+        top: 120px;
+        right: 20px;
+        width: 220px;
+        max-height: calc(100vh - 160px);
+        overflow-y: auto;
+        background: var(--bg-content);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 16px 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        z-index: 100;
+      }
+      .toc-wrapper .toc-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .toc-wrapper ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+      .toc-wrapper li {
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+      .toc-wrapper li a {
+        font-size: 12px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.2s;
+        display: block;
+        padding: 4px 0;
+      }
+      .toc-wrapper li a:hover {
+        color: var(--primary);
+      }
+      .toc-wrapper li ul {
+        padding-left: 14px;
+        border-left: 1px solid var(--border);
+        margin-top: 6px;
+      }
+      .toc-wrapper li ul li a {
+        font-size: 11px;
+      }
+
+      /* 响应式：屏幕宽度小于 1200px 时隐藏右侧 TOC */
+      @media (max-width: 1200px) {
+        .toc-wrapper {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -378,7 +445,7 @@
         // 核心配置
         loadSidebar: true, // 开启侧边栏，需配合 _sidebar.md
         loadNavbar: true, // 开启导航栏，需配合 _navbar.md
-        subMaxLevel: 3, // 侧边栏显示的目录层级
+        subMaxLevel: 0, // 禁用侧边栏目录层级
         coverpage: true, // 开启封面，需配合 _coverpage.md
         onlyCover: false, // 访问主页时是否仅显示封面
 
@@ -393,6 +460,13 @@
 
         // 侧边栏折叠配置
         sidebarDisplayLevel: 1, // 默认展开层级
+
+        // TOC 右侧目录配置
+        toc: {
+          tocMaxLevel: 3,
+          target: 'h2, h3, h4',
+          rerenderInterval: 1000,
+        },
 
         // 代码块复制按钮文字
         copyCode: {
@@ -423,5 +497,8 @@
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+
+    <!-- TOC 右侧目录插件 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script>
   </body>
 </html>
