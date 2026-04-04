@@ -1,10 +1,11 @@
 - [首页](README.md)
-- **AI技术**
-  - [AI 笔记](ai/ai.md)
+
 - **德语学习**
   - [德语笔记](german/german.md)
 - **英语学习**
   - [英语笔记](english/english.md)
+- **AI技术**
+  - [AI 笔记](ai/ai.md)
 - **云原生**
   - [Kubernetes](cloudnative/k8s.md)
   - [Docker](cloudnative/docker.md)

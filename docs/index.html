@@ -21,6 +21,352 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"
     />
+
+    <!-- 自定义样式 -->
+    <style>
+      :root {
+        --primary: #10b981;
+        --primary-light: #34d399;
+        --primary-dark: #059669;
+        --accent: #06b6d4;
+        --bg-body: #f5f7fa;
+        --bg-sidebar: #ffffff;
+        --bg-content: #ffffff;
+        --text-primary: #1f2937;
+        --text-secondary: #6b7280;
+        --border: #e5e7eb;
+      }
+
+      /* 页面整体背景 */
+      body {
+        background: var(--bg-body);
+      }
+
+      /* 内容区域背景 */
+      .markdown-section {
+        background: var(--bg-content);
+        padding: 30px 40px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        margin: 20px auto;
+        max-width: 900px;
+      }
+
+      /* 导航栏样式 */
+      .navbar {
+        background: linear-gradient(90deg, #1f2937 0%, #111827 100%);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .navbar a {
+        color: #e5e7eb !important;
+        font-weight: 500;
+        font-size: 14px;
+        transition: color 0.2s;
+      }
+      .navbar a:hover {
+        color: #10b981 !important;
+      }
+      
+      /* 侧边栏样式 */
+      .sidebar {
+        background: var(--bg-sidebar);
+        border-right: 1px solid var(--border);
+      }
+      .sidebar-nav > li > a {
+        color: var(--text-primary);
+        font-weight: 600;
+        font-size: 14px;
+        padding: 10px 15px;
+        border-left: 3px solid transparent;
+        transition: all 0.2s;
+      }
+      .sidebar-nav > li > a:hover {
+        background: rgba(16, 185, 129, 0.08);
+        color: var(--primary);
+        border-left-color: var(--primary-light);
+      }
+      .sidebar-nav ul li a {
+        color: var(--text-secondary);
+        font-size: 13px;
+        padding: 8px 15px 8px 25px;
+        transition: all 0.2s;
+      }
+      .sidebar-nav ul li a:hover {
+        color: var(--primary);
+        background: rgba(16, 185, 129, 0.05);
+      }
+      .sidebar-nav ul li.active > a {
+        color: var(--primary);
+        border-left: 3px solid var(--primary);
+        background: rgba(16, 185, 129, 0.1);
+        font-weight: 500;
+      }
+
+      /* 搜索框样式 */
+      .search-input {
+        border-radius: 6px;
+        background: #f3f4f6;
+        border: 1px solid var(--border);
+      }
+      .search-input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+      }
+
+      /* 侧边栏折叠箭头样式 */
+      .sidebar-nav > li > a .fa, 
+      .sidebar-nav > li > a .fas,
+      .sidebar-nav > li > a::after {
+        transition: transform 0.25s ease;
+      }
+
+      /* 首页链接样式 */
+      .sidebar-nav > li > a[href*="README"],
+      .sidebar-nav > li > a[href="./"] {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-primary) !important;
+        padding: 14px 15px;
+        border-radius: 6px;
+        margin: 8px 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(16, 185, 129, 0.06);
+        border: 1px solid rgba(16, 185, 129, 0.15);
+        transition: all 0.2s ease;
+      }
+      .sidebar-nav > li > a[href*="README"]::before,
+      .sidebar-nav > li > a[href="./"]::before {
+        content: '🏠';
+        font-size: 14px;
+      }
+      .sidebar-nav > li > a[href*="README"]:hover,
+      .sidebar-nav > li > a[href="./"]:hover {
+        background: rgba(16, 185, 129, 0.12);
+        border-color: var(--primary);
+        color: var(--primary) !important;
+        transform: translateX(3px);
+      }
+
+      /* 折叠箭头自定义 - 使用箭头符号 */
+      .sidebar-nav .section-item > a::after {
+        content: '';
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -4px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid var(--text-secondary);
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        transform: rotate(90deg);
+        transition: transform 0.25s ease, border-left-color 0.2s;
+      }
+      .sidebar-nav .section-item > a:hover::after {
+        border-left-color: var(--primary);
+      }
+      .sidebar-nav .section-item.collapse > a::after {
+        transform: rotate(0deg);
+      }
+
+      /* 折叠展开动画 */
+      .sidebar-nav ul {
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+
+      /* 折叠时的子菜单样式 */
+      .sidebar-nav ul li a {
+        padding-left: 30px;
+        font-size: 13px;
+      }
+      .sidebar-nav ul li ul li a {
+        padding-left: 40px;
+        font-size: 12px;
+      }
+
+      /* 封面和切换按钮 */
+      .sidebar-toggle {
+        background: var(--text-primary);
+        border-radius: 4px;
+      }
+      .sidebar-toggle:hover {
+        background: var(--primary);
+      }
+
+      /* ========== 内容页样式 ========== */
+      
+      /* 标题样式 */
+      .markdown-section h1 {
+        font-size: 2em;
+        font-weight: 700;
+        color: var(--text-primary);
+        border-bottom: 2px solid var(--primary);
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+        letter-spacing: -0.5px;
+      }
+      .markdown-section h2 {
+        font-size: 1.6em;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-top: 36px;
+        margin-bottom: 16px;
+        padding-left: 12px;
+        border-left: 3px solid var(--primary);
+      }
+      .markdown-section h3 {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #374151;
+        margin-top: 28px;
+        margin-bottom: 12px;
+      }
+      .markdown-section h4 {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #4b5563;
+      }
+
+      /* 段落和列表 */
+      .markdown-section p {
+        line-height: 1.75;
+        color: #4b5563;
+        margin-bottom: 14px;
+      }
+      .markdown-section li {
+        line-height: 1.7;
+        color: #4b5563;
+      }
+      .markdown-section ul, .markdown-section ol {
+        padding-left: 24px;
+      }
+      .markdown-section ul li {
+        margin-bottom: 6px;
+        position: relative;
+      }
+      .markdown-section ul li::marker {
+        color: var(--primary);
+      }
+
+      /* 代码块样式 - 极客风 */
+      .markdown-section pre {
+        background: #1e1e1e;
+        border-radius: 6px;
+        padding: 16px 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        border: 1px solid #333;
+      }
+      .markdown-section code {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+        font-size: 0.9em;
+        background: rgba(16, 185, 129, 0.12);
+        color: var(--primary-dark);
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      pre code {
+        background: none;
+        color: #d4d4d4;
+      }
+
+      /* 行内代码 */
+      p code, li code {
+        background: rgba(16, 185, 129, 0.1);
+        color: var(--primary-dark);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.9em;
+      }
+
+      /* 表格样式 */
+      .markdown-section table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 18px 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      .markdown-section th {
+        background: linear-gradient(90deg, #1f2937 0%, #374151 100%);
+        color: #f9fafb;
+        font-weight: 600;
+        padding: 12px 16px;
+        text-align: left;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .markdown-section td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        color: #4b5563;
+        font-size: 14px;
+      }
+      .markdown-section tr:hover {
+        background: rgba(16, 185, 129, 0.04);
+      }
+      .markdown-section tr:last-child td {
+        border-bottom: none;
+      }
+
+      /* 引用块 */
+      .markdown-section blockquote {
+        background: linear-gradient(90deg, rgba(16, 185, 129, 0.06), rgba(6, 182, 212, 0.06));
+        border-left: 3px solid var(--primary);
+        padding: 14px 18px;
+        margin: 18px 0;
+        border-radius: 0 6px 6px 0;
+      }
+      .markdown-section blockquote p {
+        margin: 0;
+        color: #4b5563;
+        font-style: italic;
+      }
+
+      /* 链接样式 */
+      .markdown-section a {
+        color: var(--primary);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s;
+      }
+      .markdown-section a:hover {
+        color: var(--primary-dark);
+        border-bottom-color: var(--primary);
+      }
+
+      /* 分隔线 */
+      .markdown-section hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--border), transparent);
+        margin: 28px 0;
+      }
+
+      /* 图片样式 */
+      .markdown-section img {
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        border: 1px solid var(--border);
+      }
+
+      /* 目录样式 */
+      .toc li {
+        color: var(--text-secondary);
+      }
+      .toc a {
+        color: var(--text-secondary);
+      }
+      .toc a:hover {
+        color: var(--primary);
+      }
+    </style>
   </head>
   <body>
     <div id="app">加载中...</div>
