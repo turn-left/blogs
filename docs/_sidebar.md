@@ -6,6 +6,7 @@
   - [英语笔记](english/english.md)
 - **AI技术**
   - [AI 笔记](ai/ai.md)
+  - [2026/4/4 Spring AI 实践](ai/2026/04-04-spring-ai.md)
 - **云原生**
   - [Kubernetes](cloudnative/k8s.md)
   - [Docker](cloudnative/docker.md)
