@@ -1,6 +1,0 @@
-- [首页](README.md)
-- **后端开发**
-  - [Java 基础](backend/java.md)
-  - [Python 笔记](backend/python.md)
-- **前端技术**
-  - [Vue 实战](frontend/vue.md)
