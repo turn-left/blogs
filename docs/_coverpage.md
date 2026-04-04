@@ -5,4 +5,4 @@
 > — **Friedrich Hayek**
 
 [GitHub](https://github.com)
-[开始阅读](#README)
+[开始阅读](./README)
