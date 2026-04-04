@@ -13,3 +13,4 @@
   - [Docker](cloudnative/docker.md)
 - **架构设计**
   - [系统设计](architecture/system-design.md)
+  - [2026/4/1 AI时代开发者的自我救赎](architecture/2026-04-01-ai-era-developer-salvation.md)
