@@ -28,7 +28,7 @@ Docker、Kubernetes、MLOps 实战
 
 系统设计、架构思维、技术方法论
 
-> [AI时代开发者的自我救赎](architecture/2026-04-01-ai-era-developer-salvation.md)
+> [AI时代开发者的自我转型](architecture/2026-04-01-ai-era-developer-salvation.md)
 
 ---
 

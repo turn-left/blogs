@@ -24,7 +24,7 @@ _— Friedrich Hayek_
 - 2026/4/5 — [AI时代的云原生学习路径](cloudnative/2026-04-05-ai-era-cloudnative-learning-path)
 - 2026/4/5 — [走遍德国第一单元学习笔记](german/2026-04-05-menschen-a1-lektion-1)
 - 2026/4/4 — [Spring AI 实践](ai/2026/04-04-spring-ai)
-- 2026/4/1 — [AI时代开发者的自我救赎](architecture/2026-04-01-ai-era-developer-salvation)
+- 2026/4/1 — [AI时代开发者的自我转型](architecture/2026-04-01-ai-era-developer-salvation)
 
 ---
 
