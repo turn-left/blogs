@@ -20,7 +20,7 @@
 - [🏠 首页](README.md)
 
 - **🤖 AI技术**
-  - [2026/4/4 Spring AI 实践](ai/04-04-spring-ai.md)
+  - [2026/4/4 Spring AI 实践](ai/2026-04-04-spring-ai.md)
 
 - **☁️ 云原生**
   - [Kubernetes](cloudnative/k8s.md)
