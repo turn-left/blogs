@@ -16,6 +16,12 @@
       href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
     />
 
+    <!-- Mermaid 图表样式 -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.css"
+    /> -->
+
     <!-- 侧边栏折叠插件样式 -->
     <link
       rel="stylesheet"
@@ -27,6 +33,16 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.css"
     />
+
+    <!-- Mermaid 图表支持 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'default',
+        securityLevel: 'loose',
+      })
+    </script>
 
     <!-- 自定义样式 -->
     <style>
@@ -707,6 +723,16 @@
           errorText: '失败',
           successText: '已复制',
         },
+        plugins: [
+          function (hook, vm) {
+            hook.doneEach(function () {
+              // 每次路由切换完成后，手动调用渲染
+              if (window.mermaid) {
+                mermaid.contentLoaded()
+              }
+            })
+          },
+        ],
       }
     </script>
 
@@ -733,6 +759,19 @@
 
     <!-- TOC 右侧目录插件 -->
     <script src="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script>
+
+    <!-- Mermaid 图表渲染插件 -->
+    <script>
+      window.$docsify = window.$docsify || {}
+      window.$docsify.plugins = window.$docsify.plugins || []
+      window.$docsify.plugins.push(function (hook, vm) {
+        hook.doneEach(function () {
+          if (typeof mermaid !== 'undefined') {
+            mermaid.run()
+          }
+        })
+      })
+    </script>
 
     <!-- 回到顶部按钮 -->
     <div
