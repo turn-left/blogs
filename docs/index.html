@@ -597,6 +597,12 @@
       .toc-wrapper li a:hover {
         color: var(--primary);
       }
+      .toc-wrapper li a.active {
+        color: var(--primary);
+        font-weight: 600;
+        border-left: 2px solid var(--primary);
+        padding-left: 8px;
+      }
       .toc-wrapper li ul {
         padding-left: 14px;
         border-left: 1px solid var(--border);
@@ -752,6 +758,76 @@
 
     <!-- TOC 右侧目录插件 -->
     <script src="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script>
+
+    <!-- TOC 滚动跟随增强脚本 -->
+    <script>
+      (function() {
+        function initHeaders() {
+          var headers = document.querySelectorAll('.markdown-section h2, .markdown-section h3, .markdown-section h4');
+          headers.forEach(function(header, index) {
+            if (!header.getAttribute('id')) {
+              header.setAttribute('id', 'heading-' + index);
+            }
+          });
+        }
+        
+        function highlightToc() {
+          var tocWrapper = document.querySelector('.toc-wrapper');
+          if (!tocWrapper) return;
+          
+          var links = tocWrapper.querySelectorAll('a');
+          var headers = document.querySelectorAll('.markdown-section h2, .markdown-section h3, .markdown-section h4');
+          
+          if (headers.length === 0) return;
+          
+          var scrollTop = window.scrollY;
+          var currentIndex = 0;
+          
+          headers.forEach(function(header, index) {
+            if (header.offsetTop - 150 <= scrollTop) {
+              currentIndex = index;
+            }
+          });
+          
+          var currentId = headers[currentIndex].getAttribute('id');
+          
+          links.forEach(function(link) {
+            link.style.color = '';
+            link.style.fontWeight = '';
+            link.style.borderLeft = '';
+          });
+          
+          var currentLink = tocWrapper.querySelector('a[href="#' + currentId + '"]');
+          if (currentLink) {
+            currentLink.style.color = 'var(--primary)';
+            currentLink.style.fontWeight = '600';
+            currentLink.style.borderLeft = '2px solid var(--primary)';
+          }
+        }
+        
+        function init() {
+          initHeaders();
+          highlightToc();
+        }
+        
+        var scrollTimer = null;
+        window.addEventListener('scroll', function() {
+          if (scrollTimer) clearTimeout(scrollTimer);
+          scrollTimer = setTimeout(highlightToc, 50);
+        });
+        
+        window.addEventListener('hashchange', function() {
+          setTimeout(highlightToc, 200);
+        });
+        
+        window.addEventListener('load', function() {
+          setTimeout(init, 300);
+        });
+        
+        // 初始执行
+        setTimeout(init, 500);
+      })();
+    </script>
 
     <!-- Mermaid 图表渲染插件 -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>

@@ -12,7 +12,7 @@
     <div class="stat-label">分类</div>
   </div>
   <div class="stat-item">
-    <div class="stat-value">6</div>
+    <div class="stat-value">7</div>
     <div class="stat-label">文章</div>
   </div>
 </div>
@@ -20,7 +20,8 @@
 - [🏠 首页](README.md)
 
 - **🤖 AI技术**
-  - [2026/4/4 Spring AI 实践](ai/2026-04-04-spring-ai.md)
+  - [2026/4/1 应用开发者AI必知必会](ai/2026-04-01-ai-essentials-for-java-developers.md)
+  - [2026/4/4 Spring AI 应用实践](ai/2026-04-04-spring-ai.md)
   - [2026/4/5 基于大模型的后端应用场景架构](ai/2026-04-05-llm-backend-scenarios.md)
 
 - **☁️ 云原生**
