@@ -17,10 +17,10 @@
     />
 
     <!-- Mermaid 图表样式 -->
-    <!-- <link
+    <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.css"
-    /> -->
+      href="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.css"
+    />
 
     <!-- 侧边栏折叠插件样式 -->
     <link
@@ -33,16 +33,6 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.css"
     />
-
-    <!-- Mermaid 图表支持 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js"></script>
-    <script>
-      mermaid.initialize({
-        startOnLoad: false,
-        theme: 'default',
-        securityLevel: 'loose',
-      })
-    </script>
 
     <!-- 自定义样式 -->
     <style>
@@ -739,6 +729,9 @@
     <!-- Docsify 核心库 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 
+    <!-- 4. 必须引入这个插件，它负责把 Markdown 代码块转换成 Mermaid 图表 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
+
     <!-- 全文搜索插件 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
@@ -761,17 +754,17 @@
     <script src="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script>
 
     <!-- Mermaid 图表渲染插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
     <script>
-      window.$docsify = window.$docsify || {}
-      window.$docsify.plugins = window.$docsify.plugins || []
-      window.$docsify.plugins.push(function (hook, vm) {
-        hook.doneEach(function () {
-          if (typeof mermaid !== 'undefined') {
-            mermaid.run()
-          }
+      if (typeof mermaid !== 'undefined') {
+        mermaid.initialize({ 
+          startOnLoad: false,
+          theme: 'default',
+          securityLevel: 'loose'
         })
-      })
+      }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-mermaid@2.0.1/dist/docsify-mermaid.min.js"></script>
 
     <!-- 回到顶部按钮 -->
     <div
