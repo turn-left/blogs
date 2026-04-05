@@ -28,11 +28,11 @@
 - **☁️ 云原生**
   - [Kubernetes](cloudnative/k8s.md)
   - [Docker](cloudnative/docker.md)
+  - [2026/4/5 AI时代的云原生学习路径](cloudnative/2026-04-05-ai-era-cloudnative-learning-path.md)
 
 - **🏛️ 架构设计**
   - [系统设计](architecture/system-design.md)
   - [2026/4/1 AI时代开发者的自我救赎](architecture/2026-04-01-ai-era-developer-salvation.md)
-  - [2026/4/5 AI时代的云原生学习路径](architecture/2026-04-05-ai-era-cloudnative-learning-path.md)
 
 - **🇩🇪 德语学习**
   - [德语笔记](german/german.md)
