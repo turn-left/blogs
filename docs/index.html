@@ -78,6 +78,157 @@
         background: var(--bg-sidebar);
         border-right: 1px solid var(--border);
       }
+
+      /* 侧边栏顶部Logo区域 */
+      .sidebar-header {
+        padding: 20px 15px;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        margin-bottom: 10px;
+      }
+      .sidebar-header .logo-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+      .sidebar-header .logo-icon {
+        width: 42px;
+        height: 42px;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+      }
+      .sidebar-header .logo-text {
+        display: flex;
+        flex-direction: column;
+      }
+      .sidebar-header .logo-title {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+      }
+      .sidebar-header .logo-subtitle {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 11px;
+        margin-top: 2px;
+      }
+      .sidebar-header .sidebar-toggle {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        width: 28px;
+        height: 28px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .sidebar-header .sidebar-toggle:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .sidebar-header .sidebar-toggle span {
+        display: block;
+        width: 14px;
+        height: 2px;
+        background: #fff;
+        border-radius: 1px;
+        position: relative;
+      }
+      .sidebar-header .sidebar-toggle span::before,
+      .sidebar-header .sidebar-toggle span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        border-radius: inherit;
+      }
+      .sidebar-header .sidebar-toggle span::before {
+        top: -5px;
+      }
+      .sidebar-header .sidebar-toggle span::after {
+        top: 5px;
+      }
+
+      /* Logo底部统计信息 */
+      .sidebar-stats {
+        display: flex;
+        gap: 15px;
+        padding: 12px 15px;
+        margin: 0 10px 10px;
+        background: rgba(16, 185, 129, 0.06);
+        border-radius: 8px;
+        border: 1px solid rgba(16, 185, 129, 0.1);
+      }
+      .sidebar-stats .stat-item {
+        text-align: center;
+        flex: 1;
+      }
+      .sidebar-stats .stat-value {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--primary);
+      }
+      .sidebar-stats .stat-label {
+        font-size: 10px;
+        color: var(--text-secondary);
+        margin-top: 2px;
+      }
+
+      /* 分类图标样式 */
+      .sidebar-nav > li > a .section-icon {
+        margin-right: 8px;
+        font-size: 14px;
+      }
+
+      /* 分类标题样式（emoji + 文字） */
+      .sidebar-nav > li > a:not([href*="README"]):not([href="./"]) {
+        font-size: 13px;
+        letter-spacing: 0.3px;
+        padding-left: 12px;
+      }
+
+      /* 分类标题加粗处理（针对 strong 或父级） */
+      .sidebar-nav > li > strong,
+      .sidebar-nav > li > span {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 12px 15px 6px;
+        display: block;
+      }
+
+      /* 子菜单项样式优化 */
+      .sidebar-nav ul li a {
+        color: var(--text-secondary);
+        font-size: 13px;
+        padding: 8px 15px 8px 30px;
+        transition: all 0.2s;
+        border-left: 2px solid transparent;
+      }
+      .sidebar-nav ul li a:hover {
+        color: var(--primary);
+        background: rgba(16, 185, 129, 0.05);
+        border-left-color: var(--primary-light);
+      }
+      .sidebar-nav ul li.active > a {
+        color: var(--primary);
+        border-left: 2px solid var(--primary);
+        background: rgba(16, 185, 129, 0.1);
+        font-weight: 500;
+      }
+
       .sidebar-nav > li > a {
         color: var(--text-primary);
         font-weight: 600;
@@ -126,21 +277,26 @@
         transition: transform 0.25s ease;
       }
 
-      /* 首页链接样式 */
+/* 首页链接样式 - 由于已有Logo区域，简化首页链接 */
       .sidebar-nav > li > a[href*="README"],
       .sidebar-nav > li > a[href="./"] {
-        font-size: 15px;
-        font-weight: 600;
-        color: var(--text-primary) !important;
-        padding: 14px 15px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text-secondary) !important;
+        padding: 8px 15px;
+        margin: 4px 10px;
         border-radius: 6px;
-        margin: 8px 12px 16px;
         display: flex;
         align-items: center;
         gap: 8px;
-        background: rgba(16, 185, 129, 0.06);
-        border: 1px solid rgba(16, 185, 129, 0.15);
         transition: all 0.2s ease;
+        border: none;
+        background: transparent;
+      }
+      .sidebar-nav > li > a[href*="README"]:hover,
+      .sidebar-nav > li > a[href="./"]::hover {
+        background: rgba(16, 185, 129, 0.08);
+        color: var(--primary) !important;
       }
       .sidebar-nav > li > a[href*="README"]::before,
       .sidebar-nav > li > a[href="./"]::before {
@@ -433,6 +589,62 @@
           display: none;
         }
       }
+
+      /* 回到顶部按钮 */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 44px;
+        height: 44px;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        z-index: 999;
+      }
+      .back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .back-to-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+      }
+      .back-to-top svg {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .back-to-top span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+      }
+
+      /* 响应式：移动端隐藏回到顶部 */
+      @media (max-width: 768px) {
+        .back-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -500,5 +712,25 @@
 
     <!-- TOC 右侧目录插件 -->
     <script src="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script>
+
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <svg viewBox="0 0 24 24">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+      <span>回到顶部</span>
+    </div>
+    <script>
+      (function() {
+        var btn = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 300) {
+            btn.classList.add('show');
+          } else {
+            btn.classList.remove('show');
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
