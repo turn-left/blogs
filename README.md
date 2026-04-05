@@ -17,7 +17,7 @@ npx docsify serve ./docs
 ### 内容结构
 
 ```
-2026/docs/
+docs/
 ├── _coverpage.md    # 封面
 ├── _navbar.md       # 导航栏
 ├── _sidebar.md      # 侧边栏
