@@ -20,8 +20,7 @@
 - [🏠 首页](README.md)
 
 - **🤖 AI技术**
-  - [AI 笔记](ai/ai.md)
-  - [2026/4/4 Spring AI 实践](ai/2026/04-04-spring-ai.md)
+  - [2026/4/4 Spring AI 实践](ai/04-04-spring-ai.md)
 
 - **☁️ 云原生**
   - [Kubernetes](cloudnative/k8s.md)
@@ -33,7 +32,6 @@
   - [2026/4/1 AI时代开发者的自我救赎](architecture/2026-04-01-ai-era-developer-salvation.md)
 
 - **🇩🇪 德语学习**
-  - [德语笔记](german/german.md)
   - [2026/4/1 三个月德语A1学习计划](german/2026-04-01-german-a1-study-plan.md)
   - [2026/4/5 走遍德国第一单元学习笔记](german/2026-04-05-menschen-a1-lektion-1.md)
 
