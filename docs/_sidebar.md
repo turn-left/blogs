@@ -8,7 +8,7 @@
 
 <div class="sidebar-stats">
   <div class="stat-item">
-    <div class="stat-value">4</div>
+    <div class="stat-value">5</div>
     <div class="stat-label">分类</div>
   </div>
   <div class="stat-item">
