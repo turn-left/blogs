@@ -1,9 +1,7 @@
 <div class="sidebar-header">
   <a class="logo-wrapper" href="#/">
-    <div class="logo-icon">W</div>
     <div class="logo-text">
-      <span class="logo-title">My Wiki</span>
-      <span class="logo-subtitle">技术笔记与学习记录</span>
+      <span class="logo-title">no name</span>
     </div>
   </a>
 </div>

@@ -2,7 +2,7 @@
 <html lang="zh-cn">
   <head>
     <meta charset="UTF-8" />
-    <title>My Wiki</title>
+    <title>no name blog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="个人技术总结与学习笔记" />
     <meta
@@ -72,7 +72,7 @@
       .navbar a:hover {
         color: #10b981 !important;
       }
-      
+
       /* 侧边栏样式 */
       .sidebar {
         background: var(--bg-sidebar);
@@ -95,7 +95,11 @@
       .sidebar-header .logo-icon {
         width: 42px;
         height: 42px;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -191,7 +195,7 @@
       }
 
       /* 分类标题样式（emoji + 文字） */
-      .sidebar-nav > li > a:not([href*="README"]):not([href="./"]) {
+      .sidebar-nav > li > a:not([href*='README']):not([href='./']) {
         font-size: 13px;
         letter-spacing: 0.3px;
         padding-left: 12px;
@@ -271,15 +275,15 @@
       }
 
       /* 侧边栏折叠箭头样式 */
-      .sidebar-nav > li > a .fa, 
+      .sidebar-nav > li > a .fa,
       .sidebar-nav > li > a .fas,
       .sidebar-nav > li > a::after {
         transition: transform 0.25s ease;
       }
 
-/* 首页链接样式 - 由于已有Logo区域，简化首页链接 */
-      .sidebar-nav > li > a[href*="README"],
-      .sidebar-nav > li > a[href="./"] {
+      /* 首页链接样式 - 由于已有Logo区域，简化首页链接 */
+      .sidebar-nav > li > a[href*='README'],
+      .sidebar-nav > li > a[href='./'] {
         font-size: 13px;
         font-weight: 500;
         color: var(--text-secondary) !important;
@@ -293,18 +297,18 @@
         border: none;
         background: transparent;
       }
-      .sidebar-nav > li > a[href*="README"]:hover,
-      .sidebar-nav > li > a[href="./"]::hover {
+      .sidebar-nav > li > a[href*='README']:hover,
+      .sidebar-nav > li > a[href='./']::hover {
         background: rgba(16, 185, 129, 0.08);
         color: var(--primary) !important;
       }
-      .sidebar-nav > li > a[href*="README"]::before,
-      .sidebar-nav > li > a[href="./"]::before {
+      .sidebar-nav > li > a[href*='README']::before,
+      .sidebar-nav > li > a[href='./']::before {
         content: '🏠';
         font-size: 14px;
       }
-      .sidebar-nav > li > a[href*="README"]:hover,
-      .sidebar-nav > li > a[href="./"]:hover {
+      .sidebar-nav > li > a[href*='README']:hover,
+      .sidebar-nav > li > a[href='./']:hover {
         background: rgba(16, 185, 129, 0.12);
         border-color: var(--primary);
         color: var(--primary) !important;
@@ -324,7 +328,9 @@
         border-top: 4px solid transparent;
         border-bottom: 4px solid transparent;
         transform: rotate(90deg);
-        transition: transform 0.25s ease, border-left-color 0.2s;
+        transition:
+          transform 0.25s ease,
+          border-left-color 0.2s;
       }
       .sidebar-nav .section-item > a:hover::after {
         border-left-color: var(--primary);
@@ -359,7 +365,7 @@
       }
 
       /* ========== 内容页样式 ========== */
-      
+
       /* 标题样式 */
       .markdown-section h1 {
         font-size: 2em;
@@ -402,7 +408,8 @@
         line-height: 1.7;
         color: #4b5563;
       }
-      .markdown-section ul, .markdown-section ol {
+      .markdown-section ul,
+      .markdown-section ol {
         padding-left: 24px;
       }
       .markdown-section ul li {
@@ -435,7 +442,8 @@
       }
 
       /* 行内代码 */
-      p code, li code {
+      p code,
+      li code {
         background: rgba(16, 185, 129, 0.1);
         color: var(--primary-dark);
         padding: 2px 6px;
@@ -478,7 +486,11 @@
 
       /* 引用块 */
       .markdown-section blockquote {
-        background: linear-gradient(90deg, rgba(16, 185, 129, 0.06), rgba(6, 182, 212, 0.06));
+        background: linear-gradient(
+          90deg,
+          rgba(16, 185, 129, 0.06),
+          rgba(6, 182, 212, 0.06)
+        );
         border-left: 3px solid var(--primary);
         padding: 14px 18px;
         margin: 18px 0;
@@ -506,7 +518,12 @@
       .markdown-section hr {
         border: none;
         height: 1px;
-        background: linear-gradient(90deg, transparent, var(--border), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--border),
+          transparent
+        );
         margin: 28px 0;
       }
 
@@ -597,7 +614,11 @@
         right: 30px;
         width: 44px;
         height: 44px;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -651,7 +672,7 @@
     <div id="app">加载中...</div>
     <script>
       window.$docsify = {
-        name: '个人技术 Wiki', // 文档标题
+        name: 'no name blogs', // 文档标题
         repo: '', // 填写你的 GitHub 仓库地址，右上方会出现 GitHub 挂件
 
         // 核心配置
@@ -714,23 +735,26 @@
     <script src="//cdn.jsdelivr.net/npm/docsify-toc@1.0.0/dist/toc.js"></script>
 
     <!-- 回到顶部按钮 -->
-    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <div
+      class="back-to-top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
       <svg viewBox="0 0 24 24">
         <polyline points="18 15 12 9 6 15"></polyline>
       </svg>
       <span>回到顶部</span>
     </div>
     <script>
-      (function() {
-        var btn = document.querySelector('.back-to-top');
-        window.addEventListener('scroll', function() {
+      ;(function () {
+        var btn = document.querySelector('.back-to-top')
+        window.addEventListener('scroll', function () {
           if (window.scrollY > 300) {
-            btn.classList.add('show');
+            btn.classList.add('show')
           } else {
-            btn.classList.remove('show');
+            btn.classList.remove('show')
           }
-        });
-      })();
+        })
+      })()
     </script>
   </body>
 </html>

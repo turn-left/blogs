@@ -1,7 +1,7 @@
-# 个人技术 Wiki
+# no name
 
-*"In the long run we are the makers of our own destiny, in the short run we are the captives of the ideas we have created."*  
-*— Friedrich Hayek*
+_"In the long run we are the makers of our own destiny, in the short run we are the captives of the ideas we have created."_  
+_— Friedrich Hayek_
 
 ---
 
@@ -28,4 +28,4 @@
 
 ---
 
-*持续更新中...*
+_持续更新中..._
