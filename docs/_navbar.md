@@ -1,2 +1,1 @@
-- [GitHub](https://github.com)
-- [关于我](about.md)
+- [GitHub](https://turn-left/github.com)
