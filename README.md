@@ -1,6 +1,6 @@
 # no name blog
 
-个人技术文档站点，记录后端（Java、Python）和前端（Vue）开发相关的笔记与实践。
+个人技术文档站点，记录后端（Java、Python）和前端（Vue）开发相关的笔记与实践。[Go](https://turn-left.github.io/blogs/#/)
 
 ## 快速开始
 
