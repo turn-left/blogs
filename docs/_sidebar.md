@@ -1,23 +1,11 @@
 <div class="sidebar-header">
   <a class="logo-wrapper" href="#/">
+    <div class="logo-icon">米</div>
     <div class="logo-text">
-      <span class="logo-title">no name</span>
+      <span class="logo-title">米斯特仰的知识库</span>
     </div>
   </a>
 </div>
-
-<div class="sidebar-stats">
-  <div class="stat-item">
-    <div class="stat-value">5</div>
-    <div class="stat-label">分类</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">9</div>
-    <div class="stat-label">文章</div>
-  </div>
-</div>
-
-- [🏠 首页](README.md)
 
 - **🤖 AI技术**
   - [2026/4/1 应用开发者AI必知必会](ai/2026-04-01-ai-essentials-for-java-developers.md)
