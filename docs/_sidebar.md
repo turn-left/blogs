@@ -23,6 +23,7 @@
   - [2026/4/1 应用开发者AI必知必会](ai/2026-04-01-ai-essentials-for-java-developers.md)
   - [2026/4/4 Spring AI 应用实践](ai/2026-04-04-spring-ai.md)
   - [2026/4/5 基于大模型的后端应用场景架构](ai/2026-04-05-llm-backend-scenarios.md)
+  - [2026/4/6 AI Agent企业落地范式](ai/2026-04-06-ai-agent-enterprise-implementation.md)
 
 - **☁️ 云原生**
   - [Kubernetes](cloudnative/k8s.md)
