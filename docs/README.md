@@ -52,10 +52,10 @@ A1 备考、教材笔记、学习计划
 
 | 日期     | 文章                                                                                                   |
 | -------- | ------------------------------------------------------------------------------------------------------ |
+| 2026/4/6 | [AI时代软件开发新范式](ai/2026-04-06-ai-software-development-paradigm.md)                            |
 | 2026/4/6 | [AI Agent企业落地范式](ai/2026-04-06-ai-agent-enterprise-implementation.md)                            |
 | 2026/4/5 | [基于大模型的后端应用场景架构](ai/2026-04-05-llm-backend-scenarios.md)                                |
-| 2026/4/5 | [AI时代的云原生学习路径](cloudnative/2026-04-05-ai-era-cloudnative-learning-path.md)                 |
-| 2026/4/5 | [走遍德国第一单元学习笔记](german/2026-04-05-menschen-a1-lektion-1.md)                               |
+| 2026/4/5 | [AI时代的云原生学习路径](cloudnative/2026-04-05-ai-era-cloudnative-learning-path.md)                   |
 
 ---
 
