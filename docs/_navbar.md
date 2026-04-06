@@ -1,1 +1,1 @@
-- [GitHub](https://turn-left/github.com)
+- [GitHub](https://github.com/turn-left)
