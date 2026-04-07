@@ -18,6 +18,7 @@
   - [Kubernetes](cloudnative/k8s.md)
   - [Docker](cloudnative/docker.md)
   - [2026/4/5 AI时代的云原生学习路径](cloudnative/2026-04-05-ai-era-cloudnative-learning-path.md)
+  - [2026/4/7 基于Docker Desktop学习K8s大纲](cloudnative/2026-04-07-docker-desktop-k8s-learning-path.md)
 
 - **🏛️ 架构设计**
   - [2026/4/1 AI时代开发者的自转型](architecture/2026-04-01-ai-era-developer-salvation.md)
