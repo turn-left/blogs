@@ -1,6 +1,6 @@
 <div class="sidebar-header">
   <a class="logo-wrapper" href="#/">
-    <div class="logo-icon">米</div>
+    <!-- <div class="logo-icon">米</div> -->
     <div class="logo-text">
       <span class="logo-title">米斯特仰的知识库</span>
     </div>
