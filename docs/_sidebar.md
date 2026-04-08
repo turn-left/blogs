@@ -1,8 +1,7 @@
 <div class="sidebar-header">
   <a class="logo-wrapper" href="#/">
-    <!-- <div class="logo-icon">米</div> -->
     <div class="logo-text">
-      <span class="logo-title">米斯特仰的知识库</span>
+      <span class="logo-title">米斯特Y的知识库</span>
     </div>
   </a>
 </div>
@@ -13,6 +12,8 @@
   - [2026/4/5 基于大模型的后端应用场景架构](ai/2026-04-05-llm-backend-scenarios.md)
   - [2026/4/6 AI Agent企业落地范式](ai/2026-04-06-ai-agent-enterprise-implementation.md)
   - [2026/4/6 AI时代软件开发新范式](ai/2026-04-06-ai-software-development-paradigm.md)
+  - [2026/4/8 OpenCode 常用技巧与最佳实践](ai/2026-04-08-opencode-tips-and-best-practices.md)
+  - [2026/4/8 MCP 协议详解与最佳应用架构](ai/2026-04-08-mcp-protocol-and-architecture.md)
 
 - **☁️ 云原生**
   - [Kubernetes](cloudnative/k8s.md)
