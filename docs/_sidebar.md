@@ -27,6 +27,7 @@
 - **🇩🇪 德语学习**
   - [2026/4/1 三个月德语A1学习计划](german/2026-04-01-german-a1-study-plan.md)
   - [2026/4/5 走遍德国第一单元学习笔记](german/2026-04-05-menschen-a1-lektion-1.md)
+  - [2026/4/10 走遍德国第二单元学习笔记](german/2026-04-10-menschen-a1-lektion-2.md)
 
 - **🇬🇧 英语学习**
   - [英语笔记](english/english.md)
