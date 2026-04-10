@@ -14,6 +14,7 @@
   - [2026/4/6 AI时代软件开发新范式](ai/2026-04-06-ai-software-development-paradigm.md)
   - [2026/4/8 OpenCode 常用技巧与最佳实践](ai/2026-04-08-opencode-tips-and-best-practices.md)
   - [2026/4/8 MCP 协议详解与最佳应用架构](ai/2026-04-08-mcp-protocol-and-architecture.md)
+  - [2026/4/10 AI模型上下文：核心机制、挑战与最佳实践](ai/2026-04-10-llm-context-deep-dive.md)
 
 - **☁️ 云原生**
   - [Kubernetes](cloudnative/k8s.md)
