@@ -23,6 +23,7 @@
   - [2026/4/5 AI时代的云原生学习路径](cloudnative/2026-04-05-ai-era-cloudnative-learning-path.md)
   - [2026/4/7 基于Docker Desktop学习K8s大纲](cloudnative/2026-04-07-docker-desktop-k8s-learning-path.md)
   - [2026/4/11 个人K8s学习环境搭建指南](cloudnative/2026-04-11-personal-k8s-learning-environment.md)
+  - [2026/4/12 Kubernetes Ingress 实战](cloudnative/2026-04-12-ingress-deep-dive.md)
 
 - **🏛️ 架构设计**
   - [2026/4/1 AI时代开发者的自转型](architecture/2026-04-01-ai-era-developer-salvation.md)
